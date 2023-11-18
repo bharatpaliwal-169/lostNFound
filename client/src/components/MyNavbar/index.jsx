@@ -51,7 +51,7 @@ const MyNavbar = () => {
           <Navbar.Brand href="/" className='brandColor' >
             <img src={logo} alt="logo" width={32} height={32} />
             <span style={{fontSize:'1.25rem',marginLeft:'0.15rem'}}>
-              LOST 'N' FOUND
+              PETS REUNITE HUB
             </span>
           </Navbar.Brand>
 

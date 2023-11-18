@@ -25,7 +25,7 @@ const Home = () => {
       <div className="container-fluid">
         <Navbar currentId={currentId} setCurrentId={setCurrentId} />
         <div className="row">
-          <div className="col-12 col-md-3 order-1">
+          <div className="col-12 col-md-4 order-1">
             <AddPost currentId={currentId} setCurrentId={setCurrentId} />
           </div>
 

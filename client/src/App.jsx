@@ -14,10 +14,10 @@ const App = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {setLoad(false)},2000);
-    const sessionTimer = setTimeout(() => {localStorage.removeItem('user-profile')},60000);
+    // const sessionTimer = setTimeout(() => {localStorage.removeItem('user-profile')},60000);
     return () => {
       clearInterval(timer);
-      clearInterval(sessionTimer);
+      // clearInterval(sessionTimer);
     }  
   }, []);
   

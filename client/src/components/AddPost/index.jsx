@@ -24,10 +24,10 @@ const AddPost = ({currentId,setCurrentId}) => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     const validData = checkFormData(postData);
-    if(!validData) {
-      alert("Hey! try have a smaller title or a more detailed message for a better reach.");
-    }
-    else if(currentId === 0 && validData) {
+    // if(!validData) {
+    //   alert("Hey! try have a smaller title or a more detailed message for a better reach.");
+    // }
+    if(currentId === 0) {
       //create Post
       dispatch(createPost({...postData,name: user?.result?.name},navigate));
     }
@@ -89,7 +89,8 @@ const AddPost = ({currentId,setCurrentId}) => {
             
             <div className="m-2 mb-4">
               <label htmlFor="title">Title* <span className='text-muted'>(keep it short)</span></label>
-              <input type="text" onChange={handleChange} name='title' value={postData.title}
+              <input type="text" onChange={(e) => setPostData({...postData,title:e.target.value})} name='title'
+                value={postData.title}
                 className="form-control" id="title"
                 placeholder="Lost my paw-frient : dogo"
               />
@@ -97,7 +98,8 @@ const AddPost = ({currentId,setCurrentId}) => {
 
             <div className="m-2 mb-4">
               <label htmlFor="message">Message* <span className='text-muted'>(describe about your pet)</span></label>
-              <textarea type="text" onChange={handleChange} name='message' value={postData.message}
+              <textarea type="text" onChange={(e) => setPostData({...postData,message:e.target.value})} name='message'
+                value={postData.message}
                 className="form-control" id="message" minrows={10}
                 placeholder="few details and contact info..." 
               />
