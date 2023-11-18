@@ -3,3 +3,39 @@
   padding:0;margin:0;box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.brandColor{
+  color:#2F5C6C!important;
+}
+.darkColor{
+  color:#2C2C2C!important;
+}
+.max-h{
+  height: 100vh;
+}
+.border-b{
+  border:1px solid red;
+}
+.nav-bg{
+  background-color:#F4F4F4!important;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
