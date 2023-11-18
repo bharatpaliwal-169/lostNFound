@@ -67,6 +67,7 @@ export const deletePost = (id,post)=> async (dispatch) => {
   try {
     await api.DeletePost(id,post);
     dispatch({type: DELETE,payload: id});
+    window.location.reload();
   } catch (error) {
     console.log(error.message);
   }

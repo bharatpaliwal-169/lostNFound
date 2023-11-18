@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';
+import logger from '../services/Logger/index.js'
 dotenv.config()
 const SECRET = process.env.SECRET;
 
@@ -15,7 +16,7 @@ const auth = async (req, res, next) => {
     next();
   
   } catch (error) {
-    console.log(error);
+    logger.error(`[auth JWT middleware]:${error}`);
   }
 };
 export default auth;
