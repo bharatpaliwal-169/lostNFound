@@ -1,8 +1,6 @@
 # PET ReUNITE HUB
 <a href="https://elements.getpostman.com/redirect?entityId=16303362-c76ef688-acf8-49df-9524-11c4d74200af&entityType=collection">
-  <h1>
-    POSTMAN: API COllection
-  </h1>
+  POSTMAN API COLLECTION
 </a>
 
 
