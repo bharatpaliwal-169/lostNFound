@@ -12,7 +12,7 @@ function useQuery(){
   return new URLSearchParams(useLocation().search);
 }
 
-const MyNavbar = () => {
+const MyNavbar = ({activeTab}) => {
   const expand = "lg";
   const user = JSON.parse(localStorage.getItem('user-profile'));
   const dispatch = useDispatch();
@@ -69,9 +69,9 @@ const MyNavbar = () => {
             
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
-                <Nav.Link active href="/">Home</Nav.Link>
-                <Nav.Link href="/about">about</Nav.Link>
-                <Nav.Link href="/team">team</Nav.Link>
+                <Nav.Link active={activeTab==="Home" ? true : false} href="/">Home</Nav.Link>
+                <Nav.Link active={activeTab==="About" ? true : false} href="/about">About</Nav.Link>
+                <Nav.Link active={activeTab==="Team" ? true : false} href="/team">Team</Nav.Link>
 
                 <form className='ms-md-5 p-md-2' onSubmit={handleSubmit}>
                   <input type="text" name='searchQuery' onChange={handleChange}

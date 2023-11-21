@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
-        <Navbar currentId={currentId} setCurrentId={setCurrentId} />
+        <Navbar currentId={currentId} setCurrentId={setCurrentId} activeTab="Home" />
         <div className="row">
           <div className="col-12 col-md-4 order-1">
             <AddPost currentId={currentId} setCurrentId={setCurrentId} />
